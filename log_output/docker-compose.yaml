@@ -1,0 +1,12 @@
+name: log-output
+
+services:
+  log-output:
+    image: hatohui/log-output:latest
+    build: .
+    container_name: log-output
+    ports:
+      - "8080:8080"
+    environment:
+      - LOG_LEVEL=info
+    restart: always
