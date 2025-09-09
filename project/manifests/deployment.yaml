@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: todo-app
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-app
+  template:
+    metadata:
+      labels:
+        app: todo-app
+    spec:
+      containers:
+        - name: todo-app
+          image: hatohui/todo-app@sha256:994c25360baf84ddd4892ebc48d598a4003f63fbd142af022e6c19882470cbb9
+          ports:
+            - containerPort: 8080

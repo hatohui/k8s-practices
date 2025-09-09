@@ -1,0 +1,12 @@
+name: Todo-app
+
+services:
+  todo-app:
+    image: hatohui/todo-app:latest
+    build: .
+    container_name: todo-app
+    ports:
+      - "8000:8000"
+    environment:
+      - LOG_OUTPUT_URL=http://log-output:8080/logs
+    restart: always
