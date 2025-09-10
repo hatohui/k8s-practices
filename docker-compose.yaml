@@ -1,0 +1,10 @@
+name: ping-pong
+
+services:
+  ping-pong:
+    image: hatohui/ping-pong:latest
+    build: .
+    container_name: ping-pong
+    ports:
+      - "8085:8085"
+    restart: always
