@@ -11,4 +11,5 @@ spec:
   ports:
     - protocol: TCP
       port: 2346
-      targetPort: 8085
+      targetPort: pod-port
+      name: service-port

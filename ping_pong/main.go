@@ -12,7 +12,7 @@ func main() {
 
 	var count = 0
 	
-	router.GET("/ping", func(c *gin.Context) {
+	router.GET("/", func(c *gin.Context) {
 		count++
 		c.JSON(http.StatusOK, gin.H{
 			"message": "pong " + fmt.Sprint(count),	
